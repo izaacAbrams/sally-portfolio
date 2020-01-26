@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>React Hello World</title>
+    <title>React Sally Resume</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="application-root"></div>
@@ -14,6 +15,57 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script type="text/babel">
 
+    function App(props){
+        console.log(props)
+        return (
+        <div className='main-app'>
+        <header>
+            {props.children}
+	    </header>
+	    <address>
+		<p>example@gmail.com</p>
+		<p>(555)555-5555</p>
+	    </address>
+    <main>
+		<img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Definitely a Pic of Me" width="246" height="369">
+        </img>
+      <section>
+        <header>
+          <h2>Education</h2>
+        <h3>College for Smart</h3>
+        </header>
+        <p>Graduated in 1944 in Design</p>
+      </section>
+
+      <section>
+        <header>
+          <h2>Employment</h2>
+          <h3>Shoe Mart</h3>
+        </header>
+          <ul>
+            <li>Shoe Attendant</li>
+            <li>Sept 1955 - Aug 1955</li>
+            <li>Watched over the shoes to make sure they did not move.</li>
+          </ul>
+        <header>
+          <h3>Taco Day</h3>
+        </header>
+          <ul>
+            <li>Taco Cruncher</li>
+            <li>Jan 1977 - Dec 1999 </li>
+            <li>My job was to lightly crack the middle of the tacos, so when they are picked up they easily break in half.</li>
+          </ul>
+      </section>
+      </main>
+        </div>
+        )
+    }
+    ReactDOM.render(
+        <App>
+        <h1>Sally Student</h1> 
+        </App>, 
+        document.querySelector('#application-root')
+    );
 </script>
 </body>
 </html>
